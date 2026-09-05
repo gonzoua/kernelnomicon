@@ -1,0 +1,84 @@
+baseURL = '/'
+locale = 'en-us'
+title = "FreeBSD developer's notebook"
+theme = 'PaperMod'
+paginate = 10
+enableRobotsTXT = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = 'monokai'
+
+[params]
+  env = 'production'
+  title = "FreeBSD developer's notebook"
+  description = 'All Things FreeBSD & Kernel Development'
+  author = 'Oleksandr Tymoshenko'
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  showtoc = true
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "FreeBSD developer's notebook"
+    Content = "Notes on FreeBSD kernel, drivers, MIPS, ARM, and embedded systems development."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/gonzoua"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archive"
+    url = "/archives/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 50
